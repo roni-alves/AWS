@@ -26,7 +26,7 @@ depois de logar na instância com o ec2-user
 - Limpar o cache armazenado no sistema
     > `sudo yum clean metadata`
 - Instalar o Apache e o PHP
-    > `sudo yum install httpd mod_ssl php7.4 php7.4-mysqlnd`
+    > `sudo yum install httpd mod_ssl php php-mysqlnd`
 
 ---
 
@@ -77,7 +77,7 @@ depois de logar na instância com o ec2-user
 - Para verificar se a permissão está ok (-rw------- 1 root root 4.0G Oct 30 11:00 /swapfile):
     > `ls -lh /swapfile`
 - Configurando como um arquivo de Swapspace no sistema:
-    > `sudo systemctl enable httpd`
+    > `sudo mkswap /swapfile`
  - Habilitando para ser usado:
     > `sudo swapon /swapfile`
 - Para verificar se tudo está certo:
